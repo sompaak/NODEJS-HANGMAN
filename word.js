@@ -6,7 +6,7 @@ function word(wordVal){
 
 	// var to hold array of letter objects
 	this.letters = [];
-	this.guessesMade = ""; //TODO: Change var name
+	//this.guessesMade = ""; //TODO: Change var name
 	
 	for(var i = 0; i < this.wordVal.length; i++) {
 		this.letters.push(new letter.letter(this.wordVal[i]));
