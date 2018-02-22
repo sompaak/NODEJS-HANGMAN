@@ -1,13 +1,10 @@
-//Check the letters guessed versus the random word selected
+
 var letter = require("./letter.js");
 
 function word(wordVal){
 	this.wordVal = wordVal;
-
 	// var to hold array of letter objects
 	this.letters = [];
-	//this.guessesMade = ""; //TODO: Change var name
-	
 	for(var i = 0; i < this.wordVal.length; i++) {
 		this.letters.push(new letter.letter(this.wordVal[i]));
 	}
@@ -23,7 +20,6 @@ word.prototype.toString = function(){
 
 word.prototype.findChar = function(char){
 	var lowerChar = char.toLowerCase();
-
 	for(var i=0; i<this.wordVal.length;i++){
 		this.letters[i].check(lowerChar);
 	}

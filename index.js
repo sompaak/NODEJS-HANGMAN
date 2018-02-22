@@ -26,17 +26,22 @@ function guessWord(){
 		}])
 
 		.then(function(letterInput){ 
+				
 				var char = letterInput.char; 
 				myWord.findChar(char);
 				if(myWord.isWordGussed()){ 
 					console.log('Correct the word is ' + myWord.toString());
 					return;
+
+
 				}
 
 				if (!myWord.wordVal.toLowerCase().includes(char.toLowerCase())){
 					maxGuesses--;
 					if (maxGuesses === 0){
 						console.log("Try again the word was " + genWord);
+
+
 						return;
 					}
 					
@@ -46,6 +51,11 @@ function guessWord(){
 			}
   		);
 	}
+
+
+
+
+	
 guessWord();
 
 
